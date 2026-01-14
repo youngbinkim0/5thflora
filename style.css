@@ -72,8 +72,9 @@ body {
     border: 2px solid #000;
     border-radius: 50px;
     transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 300;
     flex-shrink: 0;
 }
 
@@ -307,7 +308,8 @@ body {
 
 .footer-content {
     margin-bottom: 2rem;
-    font-family: 'Asap', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .footer-content p {
