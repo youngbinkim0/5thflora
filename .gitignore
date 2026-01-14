@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Build artifacts (if you add build process later)
+node_modules/
+dist/
+
+# Original unoptimized files (keep in separate folder)
+Fifth Flora-20260113T225710Z-1-001/
