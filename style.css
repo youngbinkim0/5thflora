@@ -211,16 +211,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 3rem;
     width: 100%;
-    max-width: 1200px;
-    padding: 0 2rem;
+    max-width: 1400px;
+    padding: 0 1rem;
 }
 
 .collage-img {
     object-fit: cover;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     /* Match Portra film aesthetic from slideshow */
     filter:
         brightness(1.05)
@@ -230,23 +229,23 @@ body {
         hue-rotate(-5deg);
 }
 
-/* Asymmetric sizing for natural look */
+/* Asymmetric sizing - all aligned at top, different heights */
 .collage-img-1 {
     width: 30%;
-    max-width: 350px;
-    margin-top: 2rem;
+    max-width: 380px;
+    height: 450px;
 }
 
 .collage-img-2 {
-    width: 35%;
-    max-width: 400px;
-    margin-top: 0;
+    width: 32%;
+    max-width: 420px;
+    height: 580px;
 }
 
 .collage-img-3 {
-    width: 28%;
-    max-width: 320px;
-    margin-top: 3.5rem;
+    width: 30%;
+    max-width: 380px;
+    height: 420px;
 }
 
 /* Decorative Background Images */
@@ -419,7 +418,7 @@ body {
     .collage {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0 1rem;
     }
 
@@ -428,7 +427,7 @@ body {
     .collage-img-3 {
         width: 100%;
         max-width: 100%;
-        margin-top: 0;
+        height: 350px;
     }
 }
 
