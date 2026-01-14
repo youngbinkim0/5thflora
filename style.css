@@ -180,6 +180,33 @@ body {
     mix-blend-mode: screen;
 }
 
+/* Featured Images Section */
+.featured-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 2rem;
+}
+
+.featured-img {
+    width: calc(50% - 1rem);
+    max-width: 650px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Match Portra film aesthetic from slideshow */
+    filter:
+        brightness(1.05)
+        contrast(0.92)
+        saturate(0.85)
+        sepia(0.08)
+        hue-rotate(-5deg);
+}
+
 /* Decorative Background Images */
 .decorative-images {
     position: fixed;
@@ -332,6 +359,18 @@ body {
 
     .slideshow-container {
         max-width: 90%; /* Slightly smaller on mobile */
+    }
+
+    .featured-images {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+
+    .featured-img {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
