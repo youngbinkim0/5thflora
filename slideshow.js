@@ -1,38 +1,38 @@
-// Slideshow data - using cropped square images
+// Slideshow data - using cropped square images (shuffled order)
 const slideshowImages = [
-  { src: "Slideshow Images/cropped images for slideshow/418434993_18309739819130085_936062320733734416_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_1472-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/_MG_7398-4-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/418435156_18309739810130085_7752165727893854069_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/418457044_18309739792130085_937474106629883565_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/418726911_18309739774130085_6011209659365046964_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/461658235_18343749064130085_7223932482911666025_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/461853474_18343749073130085_5019073652476433422_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_5854-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/462565363_1398102751545476_2458918867684096133_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/462570540_1137318808027399_6934403131525645120_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_2374-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/_MG_6639-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/418726911_18309739774130085_6011209659365046964_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_7788-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/461853474_18343749073130085_5019073652476433422_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_1454-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/_MG_7468-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/418457044_18309739792130085_937474106629883565_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_4414-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_6253-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/462637133_1116906946659433_8004616903300974246_n-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/IMG_1108-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_1454-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_1472-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_1476-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_1478-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_2312-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_2374-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_2403-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_4414-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_4459-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_5820-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_5854-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_6253-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_7326-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_7788-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/_MG_6639-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/_MG_7021-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/_MG_7398-4-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_2312-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/418434993_18309739819130085_936062320733734416_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_1478-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_4459-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/461658235_18343749064130085_7223932482911666025_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_5820-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/_MG_7453-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/_MG_7468-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" }
+  { src: "Slideshow Images/cropped images for slideshow/462570540_1137318808027399_6934403131525645120_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_2403-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_7326-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Slideshow Images/cropped images for slideshow/IMG_1476-VSCO.jpeg", alt: "Fifth Flora floral arrangement" }
 ];
 
 // Slideshow configuration
-const SLIDESHOW_INTERVAL = 1500; // 1.5 seconds per slide
+const SLIDESHOW_INTERVAL = 1250; // 1.25 seconds per slide
 let currentSlide = 0;
 let slideshowTimer = null;
 let noiseCanvas = null;
