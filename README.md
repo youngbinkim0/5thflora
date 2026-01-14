@@ -1,38 +1,57 @@
-# FifthFlora Website
+# Fifth Flora - Broken Website Archive
 
-Floral design portfolio by Hope Brice, Brooklyn, NY.
+This folder contains a complete local copy of the "broken" Fifth Flora website from https://a-fifthflora.vev.site/fifth-flora
 
-## About
+## Structure
 
-FifthFlora showcases floral arrangements and botanical design with a vintage, Portra film aesthetic. The name comes from a 5th floor walkup in Brooklyn and being the 5th of 5 children.
+```
+broken_website/
+├── index.html              # Main HTML file (modified to use local assets)
+├── fonts/                  # 366 font files (woff2 format)
+├── images/                 # 33 images (jpg, jpeg, png, svg)
+├── scripts/                # 2 JavaScript files
+├── styles/                 # (empty - styles are inline in HTML)
+├── a-fifthflora.vev.site/  # Original downloaded HTML
+│   └── fifth-flora.html    # Original HTML file (unmodified)
+├── urls.txt                # List of all extracted URLs
+├── download_assets.sh      # Script used to download assets
+└── update_paths.py         # Script used to update paths in HTML
 
-## Tech Stack
+```
 
-- Vanilla HTML/CSS/JavaScript
-- GitHub Pages hosting
-- Mobile-first responsive design
-- Zero dependencies or build tools
+## How to View
 
-## Local Development
+Simply open `index.html` in a web browser:
 
-Simply open `index.html` in a browser to view the site locally.
+```bash
+# Open in default browser (Linux)
+xdg-open index.html
 
-## Deployment
+# Or use a simple HTTP server
+python3 -m http.server 8000
+# Then visit: http://localhost:8000/
+```
 
-Automatically deployed via GitHub Pages from the `main` branch.
+## What Was Downloaded
 
-1. Push changes to GitHub
-2. Enable GitHub Pages in repository Settings → Pages
-3. Set source to `main` branch, root folder
-4. Site will be live at `https://[username].github.io/hope_website/`
+- **366 font files** - Various weights and styles from Google Fonts (Asap, Bree Serif, IBM Plex Sans, Poppins, Roboto, Rubik Mono One)
+- **33 images** - All photos and graphics from the CDN
+- **2 JavaScript files** - Main Vev.design runtime and additional scripts
+- **1 main HTML file** - Complete page with inline CSS
 
-## Image Optimization
+## Modifications
 
-For best performance, images should be:
-- Full size: 1920px max width, 85% quality (JPG)
-- Thumbnails: 600px max width, 75% quality (JPG)
-- File size target: <200KB per image
+The original HTML file was copied to `index.html` and all external URLs were updated to point to local files:
 
-## Image Credits
+- Font URLs: `https://fonts.vev.design/...` → `fonts/...`
+- Image URLs: `https://cdn.vev.design/...` → `images/...`
+- Script URLs: `https://cdn.vev.design/...` → `scripts/...`
+- Script URLs: `https://js.vev.design/...` → `scripts/...`
 
-All photos © Hope Brice / FifthFlora
+The original unmodified HTML is preserved at `a-fifthflora.vev.site/fifth-flora.html`
+
+## Notes
+
+- This is a static snapshot of the website from January 13, 2026
+- External links (Instagram, etc.) remain as-is
+- The site was built using Vev.design platform

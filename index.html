@@ -3,94 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FifthFlora - Floral arrangements and botanical design by Hope Brice in Brooklyn, NY">
-    <meta name="author" content="Hope Brice">
-    <meta name="keywords" content="floral design, flowers, Brooklyn, botanical, FifthFlora">
-
-    <!-- CSS in order -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/gallery.css">
-
-    <title>FifthFlora - Brooklyn Floral Design</title>
+    <meta name="description" content="Fifth Flora - Floral design by Hope Brice">
+    <title>Fifth Flora</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header with navigation -->
+    <!-- Header Section -->
     <header class="header">
-        <div class="container">
-            <h1 class="logo">FifthFlora</h1>
-            <nav class="nav">
-                <a href="#gallery">Gallery</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <div class="header-content">
+            <a href="#hero" class="logo-link">
+                <img src="images/430bTvD7um_2j7ngb.jpg" alt="Fifth Flora Logo" class="header-logo">
+            </a>
+            <p class="tagline fade-in">a work in progress...</p>
+            <a href="#hero" class="inquire-btn">inquire</a>
         </div>
     </header>
 
-    <!-- Fixed Overlay Text -->
-    <div class="overlay-text">Fifth Flora</div>
+    <!-- Hero Section with Slideshow -->
+    <section id="hero" class="hero">
+        <h1 class="hero-title slide-up">fifth flora</h1>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__content">
-            <h2 class="hero__tagline">Flowers have always been a light in my life</h2>
-        </div>
-    </section>
-
-    <!-- Gallery Section (Main Focus) -->
-    <section id="gallery" class="gallery-section">
-        <div class="container">
-            <div id="vev-embed-container">
-                <script src="https://embed.vev.page/v1/mIAFxskgm5/pVIQdUv5kad"></script>
+        <div class="slideshow-container">
+            <div class="slideshow" id="slideshow">
+                <!-- Slides will be dynamically generated -->
             </div>
         </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox__close" aria-label="Close">&times;</button>
-        <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous">&#8249;</button>
-        <button class="lightbox__nav lightbox__nav--next" aria-label="Next">&#8250;</button>
-        <div class="lightbox__content">
-            <img class="lightbox__image" src="" alt="">
-            <video class="lightbox__video" controls></video>
-        </div>
+    <!-- Background Images (decorative) -->
+    <div class="decorative-images">
+        <img src="images/D7it49NHh3_2j7nii.jpg" alt="Interior design" class="bg-img bg-img-1 fade-in">
+        <img src="images/Nr3Ahl37r7_2j7nih.jpg" alt="Bride with bouquet" class="bg-img bg-img-2 fade-in">
     </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About FifthFlora</h2>
-            <p class="about__bio">
-                FifthFlora is a Brooklyn-based floral side hustle by Hope Brice,
-                a landscape architect originally from Houston, Texas. The name
-                comes from a fifth floor walkup and being the fifth of five children.
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact__info">
-                <p><a href="mailto:hello@fifthflora.com">hello@fifthflora.com</a></p>
-                <p>Brooklyn, New York</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 FifthFlora. All rights reserved.</p>
+        <div class="footer-content slide-up-delay">
+            <p>Hope Brice</p>
+            <p><a href="mailto:fifthflora@gmail.com">fifthflora@gmail.com</a></p>
+            <p>New York, New York</p>
         </div>
+        <a href="https://www.instagram.com/fifthflora?igsh=MXR4eWFtcG95NDF6aQ==" target="_blank" rel="noopener noreferrer" class="instagram-link">
+            <img src="images/6wXfGgyjkZ.svg" alt="Instagram" class="social-icon">
+        </a>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/utils.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/main.js"></script>
+    <script src="slideshow.js"></script>
 </body>
 </html>
