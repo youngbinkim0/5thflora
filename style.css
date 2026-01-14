@@ -83,15 +83,31 @@ body {
     transform: translateY(-1px);
 }
 
-/* Hero Section */
-.hero {
+/* Full-screen Sections */
+.section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8rem 2rem 4rem;
+    padding-top: 100px; /* Account for fixed header */
     position: relative;
+}
+
+/* Section 1: Hero with Slideshow */
+.section-hero {
+    padding: 120px 2rem 4rem;
+}
+
+/* Section 2: Featured Images */
+.section-featured {
+    padding: 100px 0;
+}
+
+/* Section 3: Collage + Footer */
+.section-collage {
+    padding: 100px 0 0;
+    justify-content: space-between;
 }
 
 .hero-title {
@@ -186,7 +202,6 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 1rem;
-    margin-top: 4rem;
     width: 100%;
     max-width: 1600px;
     padding: 0 1rem;
@@ -212,7 +227,6 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 1rem;
-    margin-top: 3rem;
     width: 100%;
     max-width: 1400px;
     padding: 0 1rem;
@@ -283,10 +297,12 @@ body {
 
 /* Footer */
 .footer {
+    width: 100%;
     background-color: #F4F6EC;
-    padding: 4rem 2rem 3rem;
+    padding: 3rem 2rem;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: auto;
 }
 
 .footer-content {
@@ -389,8 +405,22 @@ body {
         height: 60px;
     }
 
-    .hero {
-        padding: 6rem 1.5rem 3rem;
+    .section {
+        min-height: auto;
+        padding-top: 80px;
+    }
+
+    .section-hero {
+        min-height: 100vh;
+        padding: 100px 1.5rem 3rem;
+    }
+
+    .section-featured {
+        padding: 2rem 0;
+    }
+
+    .section-collage {
+        padding: 2rem 0 0;
     }
 
     .hero-title {
@@ -405,7 +435,6 @@ body {
     .featured-images {
         flex-direction: column;
         gap: 1rem;
-        margin-top: 3rem;
         padding: 0 1rem;
     }
 
