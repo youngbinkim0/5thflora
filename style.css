@@ -409,39 +409,35 @@ body {
     }
 
     .header-content {
-        flex-direction: column;
-        gap: 0.8rem;
+        flex-direction: row;
+        gap: 1rem;
         align-items: center;
+        justify-content: space-between;
     }
 
     .inquire-btn {
-        order: 1;
         padding: 0.5rem 1.5rem;
         font-size: 0.85rem;
     }
 
     .tagline {
-        order: 2;
-        font-size: 1rem;
-    }
-
-    .logo-link {
-        order: 3;
+        font-size: 0.9rem;
+        flex: 1;
         text-align: center;
     }
 
     .header-logo {
-        height: 55px;
+        height: 50px;
     }
 
     .section {
         min-height: auto;
-        padding-top: 140px;
+        padding-top: 100px;
     }
 
     .section-hero {
         min-height: 100vh;
-        padding: 160px 1.5rem 3rem;
+        padding: 120px 1.5rem 3rem;
     }
 
     .section-featured {
@@ -473,7 +469,7 @@ body {
     .featured-img {
         width: 100%;
         max-width: 100%;
-        height: 450px;
+        height: 400px;
     }
 
     .collage {
@@ -488,54 +484,63 @@ body {
     .collage-img-3 {
         width: 100%;
         max-width: 100%;
-        height: 400px;
+        height: 350px;
     }
 
     .footer {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-content p {
+        display: inline;
+    }
+
+    .footer-content p:not(:last-child)::after {
+        content: " · ";
     }
 }
 
 /* Large phones */
 @media (max-width: 480px) {
     .header {
-        padding: 0.8rem;
+        padding: 0.8rem 1rem;
     }
 
     .header-content {
-        gap: 0.6rem;
+        flex-direction: row;
+        gap: 0.8rem;
     }
 
     .header-logo {
-        height: 45px;
+        height: 40px;
     }
 
     .tagline {
-        font-size: 0.85rem;
+        display: none; /* Hide tagline on small phones to save space */
     }
 
     .inquire-btn {
-        padding: 0.4rem 1.2rem;
-        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
         border-width: 1.5px;
     }
 
     .section {
-        padding-top: 120px;
+        padding-top: 80px;
     }
 
     .section-hero {
-        padding: 130px 1rem 2rem;
+        padding: 100px 1rem 2rem;
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
         letter-spacing: 0.15em;
         margin-bottom: 1.5rem;
     }
 
     .slideshow-container {
-        max-width: 95%;
+        max-width: 90%;
     }
 
     .featured-images {
@@ -544,7 +549,7 @@ body {
     }
 
     .featured-img {
-        height: 300px;
+        height: 280px;
     }
 
     .collage {
@@ -555,50 +560,55 @@ body {
     .collage-img-1,
     .collage-img-2,
     .collage-img-3 {
-        height: 280px;
+        height: 250px;
     }
 
     .footer {
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .footer-content {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .footer-content p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .social-icon {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 }
 
 /* Small phones */
 @media (max-width: 360px) {
+    .header-logo {
+        height: 35px;
+    }
+
+    .inquire-btn {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         letter-spacing: 0.1em;
     }
 
-    .header-logo {
-        height: 40px;
-    }
-
-    .tagline {
-        font-size: 0.75rem;
+    .slideshow-container {
+        max-width: 95%;
     }
 
     .featured-img {
-        height: 250px;
+        height: 220px;
     }
 
     .collage-img-1,
     .collage-img-2,
     .collage-img-3 {
-        height: 220px;
+        height: 200px;
     }
 }
 
