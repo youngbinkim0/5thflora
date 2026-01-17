@@ -569,11 +569,11 @@ body {
     }
 
     .section-featured {
-        padding: 2rem 0;
+        padding: 2rem 0 0 0;
     }
 
     .section-collage {
-        padding: 0 0 0;
+        padding: 0;
     }
 
     .featured-images {
@@ -587,22 +587,27 @@ body {
         width: 100%;
         max-width: 100%;
         height: auto;
-        object-fit: contain;
+        object-fit: unset;
     }
 
     .collage {
         flex-direction: column;
         padding: 0 0.5rem;
+        padding-top: 1.5rem;
         gap: 1.5rem;
         align-items: center;
+    }
+
+    .collage-img {
+        object-fit: unset;
     }
 
     .collage-img-1,
     .collage-img-2,
     .collage-img-3 {
         width: 100%;
+        max-width: 100%;
         height: auto;
-        object-fit: contain;
     }
 
     .footer {
