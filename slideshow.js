@@ -28,16 +28,39 @@ const slideshowImages = [
   { src: "Slideshow Images/cropped images for slideshow/462570540_1137318808027399_6934403131525645120_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/IMG_2403-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
   { src: "Slideshow Images/cropped images for slideshow/IMG_7326-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
-  { src: "Slideshow Images/cropped images for slideshow/IMG_1476-VSCO.jpeg", alt: "Fifth Flora floral arrangement" }
+  { src: "Slideshow Images/cropped images for slideshow/IMG_1476-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  // Additional images
+  { src: "Additional Images for Slideshow/461853473_18343749055130085_1606261495772545944_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/462565698_925788462299557_2021855626604276008_n-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/462638437_521962727496048_8527225605601157730_n-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/462639124_1106735437774921_1359845707097825352_n-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/462640239_1751694538966247_8380026251547072639_n-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/462644427_1215423403092063_5748945026424080638_n-2-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/IMG_1269-VSCO.jpeg", alt: "Fifth Flora floral arrangement" },
+  { src: "Additional Images for Slideshow/IMG_6211-VSCO.jpeg", alt: "Fifth Flora floral arrangement" }
 ];
 
 // Slideshow configuration
-const SLIDESHOW_INTERVAL = 1250; // 1.25 seconds per slide
+const SLIDESHOW_INTERVAL = 1750; // 1.75 seconds per slide
 let currentSlide = 0;
 let slideshowTimer = null;
 let noiseCanvas = null;
 let noiseCtx = null;
 let animationFrameId = null;
+
+// Preload all images before starting slideshow
+function preloadImages() {
+  return Promise.all(
+    slideshowImages.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => resolve(null); // Continue even if image fails
+        img.src = image.src;
+      });
+    })
+  );
+}
 
 // Initialize slideshow
 function initSlideshow() {
@@ -59,14 +82,16 @@ function initSlideshow() {
     const img = document.createElement('img');
     img.src = image.src;
     img.alt = image.alt;
-    img.loading = 'lazy';
+    img.loading = 'eager'; // Load immediately, not lazy
 
     slide.appendChild(img);
     slideshowContainer.appendChild(slide);
   });
 
-  // Start automatic slideshow
-  startSlideshow();
+  // Preload all images then start slideshow
+  preloadImages().then(() => {
+    startSlideshow();
+  });
 
   // Initialize white noise
   initWhiteNoise();
@@ -127,14 +152,13 @@ function stopNoise() {
   }
 }
 
-// Show specific slide
+// Show specific slide with slide-left animation
 function showSlide(index) {
   const slides = document.querySelectorAll('.slide');
 
   if (slides.length === 0) return;
 
-  // Remove active class from all slides
-  slides.forEach(slide => slide.classList.remove('active'));
+  const previousSlide = currentSlide;
 
   // Wrap around if necessary
   if (index >= slides.length) {
@@ -145,8 +169,17 @@ function showSlide(index) {
     currentSlide = index;
   }
 
-  // Add active class to current slide
+  // Slide out the previous slide to the left
+  slides[previousSlide].classList.remove('active');
+  slides[previousSlide].classList.add('slide-out');
+
+  // Slide in the new slide from the right
   slides[currentSlide].classList.add('active');
+
+  // Remove slide-out class after animation completes
+  setTimeout(() => {
+    slides[previousSlide].classList.remove('slide-out');
+  }, 300);
 }
 
 // Go to next slide
