@@ -124,8 +124,8 @@ body {
 
 /* Slideshow Container */
 .slideshow-container {
-    width: 90vw;
-    max-width: 800px;
+    width: 80vw;
+    max-width: 550px;
     position: relative;
     margin: 0 auto;
 }
@@ -472,8 +472,8 @@ body {
     }
 
     .slideshow-container {
-        width: 95vw;
-        max-width: none;
+        width: 85vw;
+        max-width: 500px;
     }
 
     .featured-images {
@@ -556,9 +556,8 @@ body {
     }
 
     .slideshow-container {
-        width: 100vw;
+        width: 90vw;
         max-width: none;
-        padding: 0 0.5rem;
     }
 
     .featured-images {
@@ -613,9 +612,8 @@ body {
     }
 
     .slideshow-container {
-        width: 100vw;
+        width: 92vw;
         max-width: none;
-        padding: 0 0.25rem;
     }
 
     .featured-img {

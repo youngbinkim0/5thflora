@@ -56,7 +56,7 @@ function preloadImages() {
         const img = new Image();
         img.onload = () => resolve(img);
         img.onerror = () => resolve(null); // Continue even if image fails
-        img.src = image.src;
+        img.src = encodeURI(image.src); // Encode spaces in path
       });
     })
   );
@@ -80,7 +80,7 @@ function initSlideshow() {
     }
 
     const img = document.createElement('img');
-    img.src = image.src;
+    img.src = encodeURI(image.src); // Encode spaces in path
     img.alt = image.alt;
     img.loading = 'eager'; // Load immediately, not lazy
 
