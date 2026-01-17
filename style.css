@@ -577,28 +577,32 @@ body {
     }
 
     .featured-images {
-        flex-direction: row;
+        flex-direction: column;
         padding: 0 0.5rem;
-        gap: 0.3rem;
+        gap: 0.5rem;
+        align-items: center;
     }
 
     .featured-img {
-        flex: 1;
-        max-width: 50%;
-        height: 180px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
     }
 
     .collage {
-        flex-direction: row;
+        flex-direction: column;
         padding: 0 0.5rem;
-        gap: 0.3rem;
+        gap: 0.5rem;
+        align-items: center;
     }
 
     .collage-img-1,
     .collage-img-2,
     .collage-img-3 {
-        width: 32%;
-        height: 140px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
     }
 
     .footer {
