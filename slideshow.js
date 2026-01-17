@@ -75,8 +75,11 @@ function initSlideshow() {
     return;
   }
 
-  // Shuffle images for random order each page load
-  const shuffledImages = shuffleArray(slideshowImages);
+  // Always start with this image, shuffle the rest
+  const startImage = "_MG_7468-2-VSCO.jpeg";
+  const firstImage = slideshowImages.find(img => img.src.includes(startImage));
+  const otherImages = slideshowImages.filter(img => !img.src.includes(startImage));
+  const shuffledImages = firstImage ? [firstImage, ...shuffleArray(otherImages)] : shuffleArray(slideshowImages);
 
   // Create slides
   shuffledImages.forEach((image, index) => {
