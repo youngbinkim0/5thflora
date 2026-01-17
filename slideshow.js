@@ -47,6 +47,16 @@ let noiseCanvas = null;
 let noiseCtx = null;
 let animationFrameId = null;
 
+// Shuffle array using Fisher-Yates algorithm
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 // Preload all images before starting slideshow
 function preloadImages() {
   return Promise.all(
@@ -70,8 +80,11 @@ function initSlideshow() {
     return;
   }
 
+  // Shuffle images for random order each page load
+  const shuffledImages = shuffleArray(slideshowImages);
+
   // Create slides
-  slideshowImages.forEach((image, index) => {
+  shuffledImages.forEach((image, index) => {
     const slide = document.createElement('div');
     slide.className = 'slide';
     if (index === 0) {
