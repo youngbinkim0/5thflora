@@ -6,7 +6,7 @@
 }
 
 /* Load Asap, Courier, Roboto, Inconsolata, Roboto Mono and Inter fonts */
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;700&family=Roboto:wght@300;400;700&family=Inconsolata:wght@200;300;400;700&family=Roboto+Mono:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@300;400;700&family=Roboto:wght@300;400;700&family=Inconsolata:wght@200;300;400;700&family=Roboto+Mono:wght@100;200;300;400&display=swap');
 
 body {
     font-family: 'Asap', -apple-system, sans-serif;
@@ -74,7 +74,7 @@ body {
     transition: all 0.3s ease;
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 300;
     flex-shrink: 0;
 }
 
@@ -319,7 +319,7 @@ body {
 
 .footer-content {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     text-align: left;
 }
 
