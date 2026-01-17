@@ -549,21 +549,23 @@ body {
     }
 
     .section-hero {
-        padding: 70px 1rem 2rem;
+        padding: 80px 1rem 2rem;
         min-height: 100vh;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
 
     .hero-title {
         font-size: 2rem;
         letter-spacing: 0.15em;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        margin-top: 0;
     }
 
     .slideshow-container {
         width: 85vw;
         max-width: none;
+        margin-top: 0;
     }
 
     .section-featured {
