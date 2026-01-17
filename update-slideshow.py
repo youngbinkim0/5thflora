@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Build script to update slideshow.js with images from the slideshow folders.
+Build script to update slideshow.js with images from the slideshow folder.
 Run this script whenever you add or remove images from:
   - Slideshow Images/cropped images for slideshow/
-  - Additional Images for Slideshow/
 
 Usage: python3 update-slideshow.py
 """
@@ -15,10 +14,9 @@ import re
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 SLIDESHOW_JS = os.path.join(BASE_PATH, "slideshow.js")
 
-# Folders to scan for images (relative paths)
+# Folder to scan for images (relative path)
 IMAGE_FOLDERS = [
-    "Slideshow Images/cropped images for slideshow",
-    "Additional Images for Slideshow"
+    "Slideshow Images/cropped images for slideshow"
 ]
 
 # Supported image extensions
