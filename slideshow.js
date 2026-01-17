@@ -235,12 +235,10 @@ function addKeyboardNavigation() {
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initSlideshow();
-    addHoverPause();
     addKeyboardNavigation();
   });
 } else {
   initSlideshow();
-  addHoverPause();
   addKeyboardNavigation();
 }
 
